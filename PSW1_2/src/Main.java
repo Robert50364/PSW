@@ -21,7 +21,6 @@ public class Main extends Exception{
                 System.out.println("To nie jest liczba calkowita!");
                 break;
             }
-
             if(w == 0)
             {
                 stop = true;
