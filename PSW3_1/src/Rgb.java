@@ -5,7 +5,9 @@ public class Rgb
     private int bValue;
     Rgb()
     {
-
+        setRValue(0);
+        setGValue(0);
+        setBValue(0);
     }
 
     //Settery

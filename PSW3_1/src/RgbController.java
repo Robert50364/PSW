@@ -1,23 +1,21 @@
 public class RgbController
 {
-    private Rgb rgb = new Rgb();
-    int color[] = new int[3];
-
-    public void setColor(int r, int g, int b)
+    public void setColor(Rgb rgb, int r, int g, int b)
     {
         rgb.setRValue(r);
         rgb.setGValue(g);
         rgb.setBValue(b);
     }
-    public void getColor()
-    {
-        color[0] = rgb.getRValue();
-        color[1] = rgb.getGValue();
-        color[2] = rgb.getBValue();
-    }
-    public void showColor()
-    {
-        System.out.println("["+color[0]+", "+color[1]+", "+color[2]+"]");
+    public void showColor(Rgb rgb) {
+        System.out.println("["+rgb.getRValue()+", "+rgb.getGValue()+", "+rgb.getBValue()+"]");
     }
 
+    public Rgb mieszajKolor(Rgb c1, Rgb c2)
+    {
+        Rgb c = new Rgb();
+        c.setRValue((c1.getRValue()+c2.getRValue())/2);
+        c.setGValue((c1.getGValue()+c2.getBValue())/2);
+        c.setBValue((c1.getBValue()+c2.getBValue())/2);
+        return c;
+    }
 }
