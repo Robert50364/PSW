@@ -13,5 +13,6 @@ public class Main {
         uni.dodajStudenta();
         uni.dodajOcene();
         uni.obliczSredniaAll();
+        uni.usunStudenta();
     }
 }

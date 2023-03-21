@@ -12,7 +12,7 @@ public class Student
     //Konstruktor
     Student(int nr, String firstName, String lastName, int yearOfStudy)
     {
-        setNrIndeksu(0);
+        setNrIndeksu(nr);
         setImie(firstName);
         setNazwisko(lastName);
         setRokSt(yearOfStudy);
@@ -36,10 +36,7 @@ public class Student
         this.rokSt = year;
     }
 
-    public void addRate(Float r)
-    {
-        this.rates.add(r);
-    }
+    public void addRate(Float r) {this.rates.add(r);}
 
     public void  removeRate()
     {

@@ -6,6 +6,8 @@ public class Uni
     private double listaDopuszczalnychOcen[] = {2, 3, 3.5, 4, 4.5, 5};
     private ArrayList<Student> listaStudentow = new ArrayList<>();
 
+    private int idx = 0;
+
     public void dodajStudenta()
     {
         Scanner sc = new Scanner(System.in);
@@ -17,7 +19,8 @@ public class Uni
             String sn = sc.nextLine();
             System.out.println("Podaj rok: ");
             int year= sc.nextInt();
-            this.listaStudentow.add(new Student(this.listaStudentow.size(),n, sn, year));
+            this.listaStudentow.add(new Student(idx,n, sn, year));
+            idx++;
         }catch (Exception e)
         {
             System.out.println("Something gone wrong!");
